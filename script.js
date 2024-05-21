@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
       target.style.backgroundColor = '#52BA12';
       target.classList.remove('scan');
       text.classList.add('reveal');
-      text.innerHTML = 'Ehurteemj албан ёсоор нээгдлээ';
+      text.innerHTML = 'Ehurteemj албан ёсоор хөгжүүлэгдэж эхэллээ';
       img.classList.remove('hide');
       img.classList.add('reveal');
       confetti();
