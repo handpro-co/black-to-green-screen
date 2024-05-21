@@ -5,8 +5,88 @@ html, body {
   background-color: #000;
 }
 
+#canvass {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#tsparticles {
+  height: 100%;
+  width: 100%;
+}
+
 #screen {
   width: 100vw;
   height: 100vh;
   background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+#text {
+  display: none;
+  max-width: 80%;
+  margin: 0 auto;
+  justify-items: center;
+  align-items: center;
+  color: white;
+  font-family: "Mulish", sans-serif;
+  font-size: 84px;
+  font-weight: 1000;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.reveal {
+  display: flex !important;
+}
+
+.hide {
+  display: none !important;
+}
+
+.scan {
+  outline-offset: 10px;
+  position: relative;
+}
+
+.scan::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  height: 10px;
+  width: 100vw;
+  background: #18c89b;
+  box-shadow: 0px 0px 70px 20px #18c89b;
+  clip-path: inset(0);
+  animation:
+    x 0.5s ease-in-out infinite alternate,
+    y 1s ease-in-out infinite;
+}
+
+@keyframes x {
+  to {
+    transform: translateY(-100%);
+    top: 100%;
+  }
+}
+
+@keyframes y {
+  33% {
+    clip-path: inset(-100px 0 0 0);
+  }
+
+  50% {
+    clip-path: inset(0 0 0 0);
+  }
+
+  83% {
+    clip-path: inset(0 0 -100px 0);
+  }
 }
