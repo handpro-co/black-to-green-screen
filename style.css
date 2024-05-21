@@ -41,6 +41,13 @@ html, body {
   text-transform: uppercase;
 }
 
+/* media query to small text size */
+@media (max-width: 768px) {
+  #text {
+    font-size: 48px;
+  }
+}
+
 .reveal {
   display: flex !important;
 }
