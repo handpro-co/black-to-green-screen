@@ -1,3 +1,5 @@
+let changed = false;
+
 document.addEventListener('DOMContentLoaded', () => {
   const target = document.getElementById('screen');
   const text = document.getElementById('text');
@@ -8,8 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const startPress = (event) => {
     event.preventDefault();
 
+    if (changed) return;
+
     target.classList.add('scan');
     pressTimer = setTimeout(() => {
+      changed = true;
       target.style.backgroundColor = '#52BA12';
       target.classList.remove('scan');
       text.classList.add('reveal');
