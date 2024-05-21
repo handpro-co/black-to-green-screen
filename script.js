@@ -12,6 +12,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (changed) return;
 
+    if (event.touches && event.touches.length < 5) {
+      cancelPress();
+      return;
+    }
+
     target.classList.add('scan');
     pressTimer = setTimeout(() => {
       changed = true;
